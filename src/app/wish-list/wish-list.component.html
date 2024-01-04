@@ -1,0 +1,11 @@
+<div *ngIf="wishes.length==0; else showItem">
+  <p>No item found.</p>
+</div>
+<ng-template #showItem>
+  <ul class="wish-list">
+    <li *ngFor="let item of wishes; index as ii">
+      <input type="checkbox" class="checkbox" (click)="toggleItem(item)" [attr.data-index]="ii"
+        [checked]="item.isComplete" id=""> {{item.wishText}}
+    </li>
+  </ul>
+</ng-template>

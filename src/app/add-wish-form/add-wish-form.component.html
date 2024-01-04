@@ -1,0 +1,11 @@
+<form class="row g-3 mt-3">
+
+  <div class="col-auto">
+    <label for="inputPassword2" class="visually-hidden">Password</label>
+    <input type="text" class="form-control" name="new-wish-text" [(ngModel)]="newWishText"
+      placeholder="Enter your wish">
+  </div>
+  <div class="col-auto">
+    <button type="submit" (click)="$event.preventDefault(); addWish()" class="btn btn-primary mb-3">Add Wish</button>
+  </div>
+</form>
